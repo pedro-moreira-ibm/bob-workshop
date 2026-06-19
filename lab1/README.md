@@ -74,6 +74,20 @@ Bob has several distinct modes, each optimized for different tasks. The three bu
 - Understand errors
 - Learn best practices
 
+#### 🛠️ Advanced Mode
+**When to use**: Complex development tasks requiring full tool access
+- Handle advanced coding workflows
+- Use MCP tools
+- Combine reading, editing, and command execution
+- Work without tool restrictions
+
+#### 🔀 Orchestrator Mode
+**When to use**: Complex and multi-step projects requiring coordination
+- Break down large tasks into subtasks
+- Coordinate work
+- Manage workflows
+- Route planning, coding, and Q&A to the right mode
+
 > **🎯 Bob Differentiator: [Customizable Modes](https://bob.ibm.com/docs/ide/configuration/custom-modes)**
 
 Bob's mode system is one of its key differentiators. Bob allows you to create custom modes tailored to your team's specific workflows.
