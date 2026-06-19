@@ -194,7 +194,7 @@ Ask Bob:
 
 ```text
 Finish implementing a new button that deletes all completed tasks.
-Modify all the necessary files and in the end test that it is working.
+Modify all the necessary files.
 ```
 
 
