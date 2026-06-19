@@ -329,7 +329,11 @@ This mirrors how developers commonly use AI assistants during real debugging wor
 
 When working with software, it’s essential to keep everything well documented - not only for clarity, but also to ensure maintainability and make future development easier.
 
-To achieve that, we will install a specific Bob mode specialized in writing documentation.
+To achieve that, we will create a specific Bob mode specialized in writing documentation.
+
+When prompted for the installation scope, you have 2 options:
+- Select **Global** if you regularly work with documentation. The mode will be configured across all workspaces and you can reuse it in the future.
+- Select **Project** if you only plan to use it for this lab. The mode will be available only for this project.
 
 ## 7.1: Open the Mode marketplace in Bob
 
@@ -337,35 +341,61 @@ Go to **Settings** and open the **Mode** tab.
 
 <img width="3393" height="1980" alt="image" src="https://github.com/user-attachments/assets/1ad9f355-7f25-437d-9180-6e4e90cccdad" />
 
-## 7.2: Search for the Documentation Writer mode
+## 7.2: Start creating a new mode
 
-Search for:
+Click on the "+" icon to create a new mode.
 
+<img width="2982" height="1812" alt="image" src="https://github.com/user-attachments/assets/ec65fa91-ac99-4f07-90a5-366c7ef3cd55" />
+
+## 7.3: Define the new mode
+
+<img width="1676" height="1625" alt="image" src="https://github.com/user-attachments/assets/6a2da509-d52d-4b1d-8a3c-7d630d629b97" />
+
+You will have to fill a serious of information to define the new mode. Use the ones below:
+
+slug: 
 ```text
-Documentation Writer
+documentation-writter
+```
+name:
+```text
+✍️ Documentation Writter
 ```
 
-## 7.3: Install the mode
+Description:
+```text
+Produce high-quality documentation for software projects
+```
 
-Click **Install**.
+Scope: Global
 
-<img width="3346" height="1855" alt="image" src="https://github.com/user-attachments/assets/a7a6bfa4-d526-4221-b56a-80552e54003d" />
+Role description:
+```text
+You are a technical writing professional focused on producing accurate and user-friendly documentation for software projects. Your core competencies include:
+- Writing precise and accessible technical content
+- Developing and updating README files, API references, and user manuals
+- Applying documentation standards and style guidelines
+- Analyzing code to document its behavior effectively
+- Structuring content in a clear and navigable format
+```
 
-When prompted for the installation scope, you have 2 options:
-- Select **Global** if you regularly work with documentation. The mode will be configured across all workspaces and you can reuse it in the future.
-- Select **Project** if you only plan to use it for this lab. The mode will be available only for this project.
+When to use:
+```text
+Use this mode when you need to draft, revise, or enhance technical documentation. Best suited for creating README files, API docs, user guides, setup instructions, or any documentation that must be thorough, well-organized, and easy to follow.
+```
 
+Mode-specific Custom instructions:
+```text
+Prioritize clarity, brevity, and consistency in your writing. Use Markdown to format content effectively, and ensure the documentation is logically structured and easy to maintain.
+```
+
+Available tools: Read files + Edit files + Execute commands
 
 ## 7.4: Switch to the Documentation Writer mode
 
-Click on the modes tab.
+Make sure the newly created mode is now selected.
 
-<img width="3397" height="1976" alt="image" src="https://github.com/user-attachments/assets/0892c88d-c979-4e8a-a078-63e13b55f1ff" />
-
-Select the Documentation Writer mode.
-
-<img width="3398" height="1990" alt="image" src="https://github.com/user-attachments/assets/537de38a-04bd-4a30-86a6-18561c6dd079" />
-
+<img width="2986" height="1833" alt="image" src="https://github.com/user-attachments/assets/0282c099-e2ba-4742-b5c6-3bacdcc912dd" />
 
 ## 7.5: Generate the documentation
 
