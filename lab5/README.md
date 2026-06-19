@@ -134,7 +134,7 @@ Change to **Code Mode**.
 
 ## 3.2: Convert a model to a record
 
-Start with [`legacy/src/main/java/com/example/ecommerce/model/Product.java`](legacy/src/main/java/com/example/ecommerce/model/Product.java).
+Let's start with [`lProduct.java`](legacy/src/main/java/com/example/ecommerce/model/Product.java).
 
 Ask Bob:
 
@@ -165,7 +165,7 @@ This is a good point to decide whether `Payment` and related types should become
 
 ## 4.1: Improve conditional logic
 
-Open [`legacy/src/main/java/com/example/ecommerce/service/PaymentService.java`](legacy/src/main/java/com/example/ecommerce/service/PaymentService.java).
+Let's now focus on [`PaymentService.java`](legacy/src/main/java/com/example/ecommerce/service/PaymentService.java).
 
 Ask Bob:
 
@@ -177,7 +177,7 @@ Use Java 17 features where appropriate, such as pattern matching or switch expre
 
 ## 4.2: Improve collection and stream usage
 
-Open [`legacy/src/main/java/com/example/ecommerce/service/OrderService.java`](legacy/src/main/java/com/example/ecommerce/service/OrderService.java).
+We can also explore implementing changes in the [`OrderService.java`](legacy/src/main/java/com/example/ecommerce/service/OrderService.java).
 
 Ask Bob:
 
@@ -202,12 +202,10 @@ Identify opportunities in the legacy codebase to replace older APIs with modern 
 
 ## 5.1: Modernize the Maven configuration
 
-Open [`legacy/pom.xml`](legacy/pom.xml).
-
 Ask Bob:
 
 ```text
-Create an updated Maven configuration for Java 17 based on lab5/legacy/pom.xml.
+Create an updated Maven configuration for Java 17 based on legacy/pom.xml.
 Update compiler settings and identify dependencies that should be reviewed or upgraded.
 Write the updated file into the modernized/ target structure.
 ```
