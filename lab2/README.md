@@ -56,9 +56,10 @@ Understanding when to use each mode is one of the key productivity gains when wo
 - [Set up the project](#step-1-set-up-the-project)
 - [Understanding the existing application](#step-2-understanding-the-existing-application)
 - [Identifying required file changes](#step-3-identifying-required-file-changes)
-- [Implementing a new feature](#step-4-implementing-a-new-feature)
-- [Testing the updated application](#step-5-testing-the-updated-application)
-- [Generate documentation](#step-6-generate-documentation)
+- [Try the literate coding mode](#step-4-try-the-literate-coding-mode)
+- [Finish implementing the new feature](#step-5-finish-implementing-the-new-feature)
+- [Testing the updated application](#step-6-testing-the-updated-application)
+- [Generate documentation](#step-7-generate-documentation)
 
 ---
 
@@ -236,9 +237,9 @@ Once completed, Bob should modify:
 
 ---
 
-# Step 5: Testing the updated application
+# Step 6: Testing the updated application
 
-## 5.1: Run the application
+## 6.1: Run the application
 
 Ask Bob to run the application again:
 
@@ -246,7 +247,7 @@ Ask Bob to run the application again:
 Run the backend application.
 ```
 
-## 5.2: Open the frontend.
+## 6.2: Open the frontend.
 
 **For Windows Users**:
 
@@ -271,7 +272,7 @@ Then just open the file in your browser of choice.
 
 ---
 
-## 5.2: Test the new feature
+## 6.3: Test the new feature
 
 Example test:
 1. Create several tasks
@@ -291,19 +292,19 @@ This mirrors how developers commonly use AI assistants during real debugging wor
 
 ---
 
-# Step 6: Generate documentation
+# Step 7: Generate documentation
 
 When working with software, it’s essential to keep everything well documented - not only for clarity, but also to ensure maintainability and make future development easier.
 
 To achieve that, we will install a specific Bob mode specialized in writing documentation.
 
-## 6.1: Open the Mode marketplace in Bob
+## 7.1: Open the Mode marketplace in Bob
 
 Go to **Settings** and open the **Mode** tab.
 
 <img width="3393" height="1980" alt="image" src="https://github.com/user-attachments/assets/1ad9f355-7f25-437d-9180-6e4e90cccdad" />
 
-## 6.2: Search for the Documentation Writer mode
+## 7.2: Search for the Documentation Writer mode
 
 Search for:
 
@@ -311,7 +312,7 @@ Search for:
 Documentation Writer
 ```
 
-## 6.3: Install the mode
+## 7.3: Install the mode
 
 Click **Install**.
 
@@ -322,7 +323,7 @@ When prompted for the installation scope, you have 2 options:
 - Select **Project** if you only plan to use it for this lab. The mode will be available only for this project.
 
 
-## 6.4: Switch to the Documentation Writer mode
+## 7.4: Switch to the Documentation Writer mode
 
 Click on the modes tab.
 
@@ -333,7 +334,7 @@ Select the Documentation Writer mode.
 <img width="3398" height="1990" alt="image" src="https://github.com/user-attachments/assets/537de38a-04bd-4a30-86a6-18561c6dd079" />
 
 
-## 6.5: Generate the documentation
+## 7.5: Generate the documentation
 
 Ask Bob:
 
