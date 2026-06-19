@@ -73,7 +73,39 @@ Extract the provided ZIP file and open that extracted folder in IBM Bob before s
 
 **✅ Checkpoint**: The project is now open in your workspace.
 
+## 1.2 (OPTIONAL - Only for those who did not complete LAB1): Open the application frontend
 
+Ask Bob to run the application:
+
+```bash
+Run the backend application.
+```
+
+Then, open the frontend.
+
+**For Windows Users**:
+
+Open your application's frontend by right-clicking the `index.html` file and then selecting "Open with Live Server".
+
+<img width="3423" height="1905" alt="image" src="https://github.com/user-attachments/assets/32e91123-8189-40b9-85f7-7fcb80f30b1f" />
+
+<img width="3428" height="1910" alt="image" src="https://github.com/user-attachments/assets/3f0c75d7-c387-4e97-866c-6fba81726bc7" />
+
+**For macOS Users**:
+
+Right-click the `index.html` file and select "Reveal in Finder"
+
+<img width="1914" height="1046" alt="image" src="https://github.com/user-attachments/assets/c61134bf-6dc1-4379-bbdb-ac1cc56fb489" />
+
+Then just open the file in your browser of choice.
+
+<img width="2340" height="1000" alt="image" src="https://github.com/user-attachments/assets/8ea0195b-bcb9-4b40-8b88-15086d537549" />
+
+Feel free to explore the application and try it out before you advance with the lab.
+
+**✅ Checkpoint**: Frontend loads and displays the User Interface.
+
+---
 ---
 
 # Step 2: Understanding the existing application
