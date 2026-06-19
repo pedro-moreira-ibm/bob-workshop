@@ -372,11 +372,7 @@ Description:
 Produce high-quality documentation for software projects.
 ```
 
-Scope:
-
-```text
-Global
-```
+Scope: Global
 
 Role description:
 
@@ -401,11 +397,8 @@ Mode-specific custom instructions:
 Prioritize clarity, brevity, and consistency in your writing. Use Markdown to format content effectively, and ensure the documentation is logically structured and easy to maintain.
 ```
 
-Available tools:
+Available tools: Read files + Edit files + Execute commands
 
-```text
-Read files + Edit files + Execute commands
-```
 
 ## 7.4: Switch to the Documentation Writer mode
 
