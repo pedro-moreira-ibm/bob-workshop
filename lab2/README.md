@@ -101,6 +101,8 @@ Then just open the file in your browser of choice.
 
 <img width="2340" height="1000" alt="image" src="https://github.com/user-attachments/assets/8ea0195b-bcb9-4b40-8b88-15086d537549" />
 
+<img width="3829" height="2180" alt="image" src="https://github.com/user-attachments/assets/732e02f3-11c0-43e0-ae17-3e88ff2dc2a2" />
+
 Feel free to explore the application and try it out before you advance with the lab.
 
 **✅ Checkpoint**: Frontend loads and displays the User Interface.
