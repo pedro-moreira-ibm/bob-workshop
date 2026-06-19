@@ -21,7 +21,7 @@ Helpful but not required:
 
 ## What You'll Translate
 
-You will translate the Python source file [`source/data_processor.py`](source/data_processor.py) into a Node.js implementation in [`solution/`](solution/).
+You will translate the Python source file [`source/data_processor.py`](source/data_processor.py) into a Node.js implementation.
 
 The Python script:
 - Reads CSV files
@@ -50,7 +50,7 @@ By the end of this lab, you will:
 
 ## 1.1: Download and open the lab folder in Bob
 
-Download the lab files ZIP [here](data-processor.zip). Extract it to a new local folder and open that extracted folder in IBM Bob before starting the exercise.
+Download the lab files ZIP [here](source.zip). Extract it to a new local folder and open that extracted folder in IBM Bob before starting the exercise.
 
 <img width="3330" height="1985" alt="image" src="https://github.com/user-attachments/assets/9d22db97-cc06-46fe-b0e3-d7ef7a3839a0" />
 
@@ -68,7 +68,7 @@ Review the code structure and pay attention to:
 
 Change to **Ask Mode**.
 
-<img width="3329" height="1974" alt="image" src="https://github.com/user-attachments/assets/39cb0392-0b45-4311-a9ba-696fa95fae8d" />
+<img width="3342" height="1977" alt="image" src="https://github.com/user-attachments/assets/b369b460-94be-471e-9e7d-5133f41f9d0d" />
 
 ## 1.3: Ask Bob to explain the code
 
@@ -82,7 +82,7 @@ Analyze source/data_processor.py and explain:
 4. Which parts may need special handling in JavaScript
 ```
 
-<img width="3336" height="1974" alt="image" src="https://github.com/user-attachments/assets/23cc2c86-ae98-46ea-9373-9902059ec489" />
+<img width="3331" height="1977" alt="image" src="https://github.com/user-attachments/assets/1e31a788-ef06-4756-8336-8164a97e992b" />
 
 Bob should identify file Input/Output, list processing, JSON export, and the `DataProcessor` class design.
 
@@ -113,14 +113,14 @@ Bob should highlight differences such as:
 
 Change to **Plan Mode**.
 
-<img width="3332" height="1972" alt="image" src="https://github.com/user-attachments/assets/497c6390-d321-45af-a9ca-e73e360d43fc" />
+<img width="3307" height="1979" alt="image" src="https://github.com/user-attachments/assets/ef0175a2-0ef6-4a71-aa5c-9a31780c5fb3" />
 
 ## 2.2: Create a translation mapping
 
 Ask Bob:
 
 ```text
-Create a translation plan for converting source/data_processor.py to JavaScript.
+Create a file with the translation plan for converting source/data_processor.py to JavaScript.
 Include:
 1. Python-to-JavaScript feature mapping
 2. Library equivalents
@@ -133,16 +133,6 @@ Bob should produce a clear mapping before any code is written.
 
 **✅ Checkpoint**: You have a concrete translation plan.
 
-## 2.3: Confirm the target structure
-
-For this lab, the target output should live in [`solution/`](solution/):
-- [`solution/data_processor.js`](solution/data_processor.js)
-- [`solution/package.json`](solution/package.json)
-
-This keeps the translated version separate from the source file.
-
-**✅ Checkpoint**: You know where the translated files should be created or updated.
-
 ---
 
 # Step 3: Implement the JavaScript version
@@ -151,18 +141,16 @@ This keeps the translated version separate from the source file.
 
 Change to **Code Mode**.
 
-<img width="3332" height="1978" alt="image" src="https://github.com/user-attachments/assets/62076dd7-70b2-4ac7-aae0-87aaaddb0ce6" />
+<img width="3314" height="1980" alt="image" src="https://github.com/user-attachments/assets/a5e473a6-9dd7-4da4-a1d2-1604c83ea416" />
 
 ## 3.2: Create or update the package configuration
 
 Ask Bob:
 
 ```text
-Create or update solution/package.json for the JavaScript translation.
+Create solution/package.json for the JavaScript translation.
 Use Node.js, set data_processor.js as the entry point, and add the dependencies needed for CSV parsing.
 ```
-
-<img width="3340" height="1975" alt="image" src="https://github.com/user-attachments/assets/85c8117e-b255-414e-b2a9-7c76dac7e93d" />
 
 **✅ Checkpoint**: The JavaScript project configuration is ready.
 
@@ -182,7 +170,7 @@ Include:
 
 Bob should generate the translated implementation in the `solution/` folder.
 
-<img width="3817" height="2269" alt="image" src="https://github.com/user-attachments/assets/51cac5e4-650e-462b-96a1-5280d5c61ae5" />
+<img width="3321" height="1983" alt="image" src="https://github.com/user-attachments/assets/d397b1de-24a6-4685-82e5-ec6d96ca79e2" />
 
 **✅ Checkpoint**: The JavaScript version has been created.
 
@@ -205,7 +193,7 @@ This is useful because translation is not only about syntax. It is also about ch
 
 ## 4.1: Run and compare the two versions of data_processor
 
-Ask Bob:
+Switch back to Code mode and ask Bob:
 
 ```text
 Please run both versions of data_processor: python and javascript.
@@ -214,7 +202,7 @@ Compare their outputs and confirm whether both implementations create equivalent
 
 Review the generated output and result files together.
 
-<img width="3425" height="1968" alt="image" src="https://github.com/user-attachments/assets/9895cb4f-93f1-48de-b278-dc3213fa961c" />
+<img width="3319" height="1971" alt="image" src="https://github.com/user-attachments/assets/0b34dab7-f4f5-4222-860f-0a8e95b3af66" />
 
 **✅ Checkpoint**: Both implementations behave consistently.
 
