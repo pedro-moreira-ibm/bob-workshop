@@ -66,7 +66,7 @@ Understanding when to use each mode is one of the key productivity gains when wo
 
 ## 1.1: Extract and open the project
 
-Extract the provided ZIP file and open the project folder in IBM Bob.
+Extract the provided ZIP file and open that extracted folder in IBM Bob before starting the exercise.
 
 ```text
 lab2-existing-app
