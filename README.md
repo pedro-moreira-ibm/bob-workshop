@@ -2,10 +2,10 @@
 
 # Hands-on Labs
 
-These hands-on labs are designed to help you apply AI-assisted development techniques across real-world software engineering scenarios. 🚀
-You will generate, explain, extend, secure, translate, and modernize code while working through practical exercises.
+These hands-on labs are designed to help participants learn how to use IBM Bob across real-world software engineering scenarios. 🚀
+Participants will generate, explain, extend, secure, translate, and modernize code while working through practical exercises.
 
-By the end of these labs, you will have practiced using AI to support different stages of the development lifecycle, from building new applications to improving existing codebases. 💡
+By the end of these labs, participants will have practiced using IBM Bob to support different stages of the development lifecycle, from building new applications to improving existing codebases. 💡
 
 ---
 
