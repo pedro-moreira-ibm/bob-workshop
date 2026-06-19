@@ -134,7 +134,7 @@ Change to **Code Mode**.
 
 ## 3.2: Convert a model to a record
 
-Let's start with [`lProduct.java`](legacy/src/main/java/com/example/ecommerce/model/Product.java).
+Let's start with [`Product.java`](legacy/src/main/java/com/example/ecommerce/model/Product.java).
 
 Ask Bob:
 
