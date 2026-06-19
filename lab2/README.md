@@ -73,7 +73,7 @@ Extract the provided ZIP file and open that extracted folder in IBM Bob before s
 
 **✅ Checkpoint**: The project is now open in your workspace.
 
-## 1.2 (OPTIONAL - Only for those who did not complete LAB1): Open the application frontend
+## 1.2: Open the application frontend (OPTIONAL - only for those who did not complete Lab1)
 
 Ask Bob to run the application:
 
@@ -105,7 +105,6 @@ Feel free to explore the application and try it out before you advance with the 
 
 **✅ Checkpoint**: Frontend loads and displays the User Interface.
 
----
 ---
 
 # Step 2: Understanding the existing application
