@@ -68,9 +68,6 @@ Understanding when to use each mode is one of the key productivity gains when wo
 
 Extract the provided ZIP file and open that extracted folder in IBM Bob before starting the exercise.
 
-```text
-lab2-existing-app
-```
 <img width="3418" height="1984" alt="image" src="https://github.com/user-attachments/assets/4f3e7f4f-3c48-4403-831e-48a855736e6a" />
 
 **✅ Checkpoint**: The project is now open in your workspace.
