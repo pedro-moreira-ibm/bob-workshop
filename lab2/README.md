@@ -8,9 +8,6 @@ This reflects a very common real-world scenario, where developers often work on 
 
 The application used in this lab corresponds to the application developed in Lab 1.
 
-> ⚠️ Participants who completed Lab 1 can use their own application files instead of the provided ZIP file.  
-> However, some visual or structural differences may exist compared to the reference screenshots used in this guide.
-
 ## Before Starting
 
 Make sure you have:
@@ -65,6 +62,9 @@ Understanding when to use each mode is one of the key productivity gains when wo
 ---
 
 # Step 1: Set up the project
+
+> ⚠️ Participants who completed Lab 1 can use their own application files instead of the provided ZIP file.  
+> However, some visual or structural differences may exist compared to the reference screenshots used in this guide.
 
 ## 1.1: Extract and open the project (OPTIONAL - only for those who did not complete Lab1)
 
