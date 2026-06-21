@@ -48,8 +48,6 @@ Download [`vulnerable-app.zip`](vulnerable-app.zip), extract it locally, and ope
 
 <img width="3330" height="1985" alt="image" src="https://github.com/user-attachments/assets/9d22db97-cc06-46fe-b0e3-d7ef7a3839a0" />
 
-The files in this sample are intentionally messy. Use that as part of the exercise rather than assuming the project is already well organized.
-
 **✅ Checkpoint**: The vulnerable application is open in your Bob workspace.
 
 ## 1.2: Review the files you will analyze
