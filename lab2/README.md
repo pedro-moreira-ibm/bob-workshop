@@ -332,11 +332,6 @@ When working with software, it is important to keep the code well documented. Go
 
 To do this, you will create a custom Bob mode specialized in writing technical documentation.
 
-When prompted for the installation scope, you have two options:
-
-* Select **Global** if you regularly work with documentation. The mode will be available across all workspaces and can be reused in future projects.
-* Select **Project** if you only plan to use it for this lab. The mode will be available only in the current project.
-
 ## 7.1: Open the Mode marketplace in Bob
 
 Go to **Settings** and open the **Modes** tab.
@@ -350,6 +345,11 @@ Click the **+** icon to create a new mode.
 <img width="2982" height="1812" alt="image" src="https://github.com/user-attachments/assets/ec65fa91-ac99-4f07-90a5-366c7ef3cd55" />
 
 ## 7.3: Define the new mode
+
+When prompted for the installation scope, you have two options:
+
+* Select **Global** if you regularly work with documentation. The mode will be available across all workspaces and can be reused in future projects.
+* Select **Project** if you only plan to use it for this lab. The mode will be available only in the current project.
 
 Fill in the mode details using the information below:
 
