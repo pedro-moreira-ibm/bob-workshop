@@ -51,7 +51,7 @@ Open this folder in IBM Bob.
 
 ### 2.1: Understanding Bob Modes
 
-Bob has several distinct modes, each optimized for different tasks. The three built-in modes you'll use in this lab are:
+Bob has several distinct modes, each optimized for different tasks. The built-in modes you'll use in this lab are:
 
 #### 🎯 Plan Mode
 **When to use**: Planning, designing, strategizing
