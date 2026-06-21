@@ -10,13 +10,10 @@ This lab is intentionally more advanced than the previous Bob labs. The goal is 
 
 Make sure you have:
 - IBM Bob access
-- A JDK for Java 17 or Java 21
+- A JDK for Java 17
 - Maven
 - A terminal
 - A local workspace where Bob can create files and run commands
-
-Helpful but not required:
-- Familiarity with Java, Maven, and object-oriented design
 
 ## What You'll Modernize
 
@@ -36,7 +33,7 @@ By the end of this lab, you will:
 - ✅ Create a phased migration plan
 - ✅ Modernize domain models and business logic
 - ✅ Update dependencies and build configuration
-- ✅ Validate a migration path toward Java 17 or Java 21
+- ✅ Validate a migration path toward Java 17
 
 ## Lab Structure
 
@@ -85,8 +82,6 @@ Analyze the legacy Java application in legacy and explain:
 ```
 
 <img width="3308" height="1977" alt="image" src="https://github.com/user-attachments/assets/cdd0196d-ecf7-4899-bfc9-96a6281a7ab4" />
-
-Bob should help you separate language modernization from build and framework work.
 
 **✅ Checkpoint**: You understand the main modernization opportunities.
 
@@ -216,7 +211,7 @@ Switch to **Plan Mode** and ask:
 
 ```text
 Analyze the Java dependency and build upgrade risks for this migration.
-Call out anything that could block a move from Java 8 to Java 17 or Java 21.
+Call out anything that could block a move from Java 8 to Java 17.
 ```
 
 This helps you separate easy source refactors from ecosystem-level risks.
