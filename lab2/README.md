@@ -427,9 +427,7 @@ Bob will analyze the backend code and add documentation comments to the relevant
 
 # Step 8: Explore the Bob Findings feature (optional)
 
-Bob Findings can help you review potential issues detected in your code and apply suggested fixes directly from Bob.
-
-Because this feature depends on your project files, you may see different findings than the screenshots below, or no findings at all.
+After Bob completes a review, any identified issues are displayed in the **Bob Findings** panel. This panel helps you quickly assess potential problems in your code and review Bob’s suggested fixes. You can interact with each finding in several ways, including examining the issue in context and applying recommended changes directly from Bob. Because findings are generated based on the specific files and code in your project, the results may differ from the examples shown below, and in some cases, no findings may be reported.
 
 ## 8.1: Open Bob Findings
 
@@ -441,7 +439,7 @@ Bob may display findings or improvement suggestions for specific files in your p
 
 ## 8.2: Scan a file for vulnerabilities
 
-Click **Scan**. Bob will analyze the selected file and display any detected vulnerabilities or improvement suggestions in the panel on the right.
+Select one of the findings. Bob has analyzed the selected file and displayed the detected vulnerabilities.
 
 <img width="3016" height="1832" alt="image" src="https://github.com/user-attachments/assets/1cfdabe5-6402-4886-b2be-53483bb81ee4" />
 
