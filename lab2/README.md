@@ -66,7 +66,7 @@ Understanding when to use each mode is one of the key productivity gains when wo
 
 # Step 1: Set up the project
 
-## 1.1: Extract and open the project
+## 1.1: Extract and open the project (OPTIONAL - only for those who did not complete Lab1)
 
 Extract the provided ZIP file and open that extracted folder in IBM Bob before starting the exercise.
 
