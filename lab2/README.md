@@ -425,7 +425,7 @@ Bob will analyze the backend code and add documentation comments to the relevant
 
 ---
 
-# Step 8: Explore the Bob Findings functionality (OPTIONAL)
+# Step 8: Explore the Bob Findings feature (optional)
 
 Bob Findings can help you review potential issues detected in your code and apply suggested fixes directly from Bob.
 
