@@ -43,7 +43,7 @@ bob-lab1
 
 Open this folder in IBM Bob.
 
-<img width="2532" height="1468" alt="image" src="https://github.com/user-attachments/assets/f9d06884-0c45-4cb0-a6ed-dbf9a682e140" />
+<img alt="1" src="images/1.png">
 
 **✅ Checkpoint**: Your workspace is ready to start working.
 
@@ -106,9 +106,9 @@ Please help me plan:
 4. Technology stack recommendations
 ```
 
-<img width="3416" height="1907" alt="image" src="https://github.com/user-attachments/assets/5467210e-dd35-4146-bcbd-cd8be568cd6f" />
+<img alt="2" src="images/2.png">
 
-<img width="3382" height="1893" alt="image" src="https://github.com/user-attachments/assets/d246000d-bd95-4ad7-bc4a-8aa0d79d903d" />
+<img alt="3" src="images/3.png">
 
 
 **Bob's Interactive Approach:**
@@ -127,7 +127,7 @@ Bob might ask:
 - No user authentication
 - Basic CRUD operations only
 
-<img width="3394" height="1902" alt="image" src="https://github.com/user-attachments/assets/c986ef37-efdd-448b-8415-f2124bfaaeea" />
+<img alt="4" src="images/4.png">
 
 This collaborative approach ensures Bob will build exactly what you need, and will not assume what you want.
 
@@ -143,7 +143,7 @@ Now let's build the backend for your application using Bob's Code mode.
 
 Change from Plan to **Code mode**.
 
-<img width="3399" height="1906" alt="image" src="https://github.com/user-attachments/assets/3b06ce22-f6ba-463f-860d-1d6f427509e8" />
+<img alt="5" src="images/5.png">
 
 ### 3.2: Create the backend structure
 
@@ -159,7 +159,7 @@ Create a Flask backend for the To Do app with the following files:
 The To Do model should have: id, title, description, completed (boolean), created_at (timestamp)
 ```
 
-<img width="3379" height="1894" alt="image" src="https://github.com/user-attachments/assets/fb1e4254-f985-45b3-8980-619b8676c187" />
+<img alt="6" src="images/6.png">
 
 Bob should generate all the necessary files regarding your backend structure. Review each file as Bob creates them.
 
@@ -177,7 +177,7 @@ Implement the following REST API endpoints in app.py:
 Include proper error handling and JSON responses.
 ```
 
-<img width="3401" height="1907" alt="image" src="https://github.com/user-attachments/assets/5b6faca1-c3ce-4a85-9690-3ecb76f4e5fa" />
+<img alt="7" src="images/7.png">
 
 ### 3.4 Review Generated Code
 
@@ -243,12 +243,12 @@ Run the backend application.
 While Bob solves the request, you might see the option to "Proceed while running". By clicking it, you allow Bob to work on independent tasks while a command run when possible.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/80265b0c-871e-40af-af4d-7fbe7223da74" width="350">
+  <img alt="8" src="images/8.png">
 </p>
 
 Once finished, Bob should let you know that backend application is now running successfully on http://localhost:5000.
 
-<img width="1100" height="610" alt="image" src="https://github.com/user-attachments/assets/c65e73a7-f54e-4fbf-b996-8da7d1578e29" />
+<img alt="9" src="images/9.png">
 
 
 **✅ Checkpoint**: Backend is running without errors.
@@ -379,23 +379,23 @@ async function createTo Do(title, description) {
 
 Open your application's frontend by right-clicking the `index.html` file and then selecting "Open with Live Server".
 
-<img width="3423" height="1905" alt="image" src="https://github.com/user-attachments/assets/32e91123-8189-40b9-85f7-7fcb80f30b1f" />
+<img alt="10" src="images/10.png">
 
-<img width="3428" height="1910" alt="image" src="https://github.com/user-attachments/assets/3f0c75d7-c387-4e97-866c-6fba81726bc7" />
+<img alt="11" src="images/11.png">
 
 **For macOS Users**:
 
 Right-click the `index.html` file and select "Reveal in Finder"
 
-<img width="1914" height="1046" alt="image" src="https://github.com/user-attachments/assets/c61134bf-6dc1-4379-bbdb-ac1cc56fb489" />
+<img alt="12" src="images/12.png">
 
 Then just open the file in your browser of choice.
 
-<img width="2340" height="1000" alt="image" src="https://github.com/user-attachments/assets/8ea0195b-bcb9-4b40-8b88-15086d537549" />
+<img alt="13" src="images/13.png">
 
 The frontend should now be open, as shown below. Keep in mind that your frontend may look different, since the prompts we provided to Bob were not very detailed. This gave Bob flexibility to make certain implementation and design decisions independently.
 
-<img width="3748" height="2135" alt="image" src="https://github.com/user-attachments/assets/9272bd5f-358a-45ef-9340-70d8c068b200" />
+<img alt="14" src="images/14.png">
 
 
 **✅ Checkpoint**: Frontend loads and displays the User Interface.
@@ -424,7 +424,7 @@ Explore and try the frontend you opened in the previous step. Some testing examp
 1. Refresh the browser
 2. ✅ To Dos persist (stored in database)
 
-<img width="3787" height="2170" alt="image" src="https://github.com/user-attachments/assets/3b1c6356-c4b9-43bc-bc86-644f27933fd3" />
+<img alt="15" src="images/15.png">
 
 ⚠️**NOTE**⚠️: If your tests are not successful, it means the application's backend is not running anymore. You can ask Bob to rerun the backend for you like you did previously in step 3.6 and start your tests again.
 
