@@ -46,7 +46,6 @@ By the end of this lab, you will:
 
 Download [`vulnerable-app.zip`](vulnerable-app.zip), extract it locally, and open the extracted [`vulnerable-app/`](vulnerable-app/) folder in IBM Bob.
 
-<img width="3330" height="1985" alt="image" src="https://github.com/user-attachments/assets/9d22db97-cc06-46fe-b0e3-d7ef7a3839a0" />
 <img alt="1" src="images/1.png">
 
 
@@ -73,7 +72,7 @@ The main files for this lab are:
 
 Change to **Ask Mode**.
 
-<img width="3357" height="1977" alt="image" src="https://github.com/user-attachments/assets/06232be3-7b7d-4f42-8607-43d04d9c4146" />
+<img alt="2" src="images/2.png">
 
 Ask Mode is useful when you want Bob to explain the current state of the codebase before making changes.
 
@@ -89,11 +88,11 @@ Please analyze this application  and explain:
 4. Which issues should be treated as security-relevant versus organizational
 ```
 
-<img width="3339" height="1972" alt="image" src="https://github.com/user-attachments/assets/5a9c6314-81e1-40b5-8c00-0106d2d22058" />
+<img alt="3" src="images/3.png">
 
 Bob should quickly identify that this sample has both security problems and structural inconsistencies.
 
-<img width="3819" height="2258" alt="image" src="https://github.com/user-attachments/assets/cd0b3d88-464d-4f1c-835d-132dc1932959" />
+<img alt="4" src="images/4.png">
 
 **✅ Checkpoint**: You understand the current codebase before attempting fixes.
 
@@ -105,7 +104,7 @@ Ask Bob:
 Explain the search_todos() function in database.py.
 Why is it vulnerable, and how would you rewrite it safely?
 ```
-<img width="3339" height="1976" alt="image" src="https://github.com/user-attachments/assets/b36edb4f-1c95-49b0-87e4-acc26d2567f8" />
+<img alt="5" src="images/5.png">
 
 Bob should identify the raw SQL string formatting and recommend parameterized queries.
 
@@ -132,7 +131,7 @@ Bob should call out the hardcoded credentials and the need to separate real secr
 
 Change to **Plan Mode**.
 
-<img width="3327" height="1970" alt="image" src="https://github.com/user-attachments/assets/42d0bbfd-4f14-41a3-9308-27ca912f187d" />
+<img alt="6" src="images/6.png">
 
 Plan Mode is useful here because you are not fixing a single bug. You are prioritizing a group of related security and project hygiene issues.
 
@@ -152,7 +151,7 @@ Include:
 
 Bob should produce a ranked plan. It may then ask to switch to code mode in order to start working on solutions. For now, we can decline that and focus on first reviewing and commenting the plan.
 
-<img width="3332" height="1973" alt="image" src="https://github.com/user-attachments/assets/b9924ce7-691a-4bbe-83fd-5b129246c173" />
+<img alt="7" src="images/7.png">
 
 **✅ Checkpoint**: You have a clear, prioritized remediation plan.
 
@@ -196,7 +195,7 @@ That creates risk even when the issue is not a classic injection vulnerability.
 
 Change to **Code Mode**.
 
-<img width="3362" height="1978" alt="image" src="https://github.com/user-attachments/assets/ba6abc92-a850-466d-8c9b-b3335c6d869d" />
+<img alt="8" src="images/8.png">
 
 Code Mode can now use your analysis and remediation plan to modify the project.
 
@@ -209,7 +208,7 @@ Fix the SQL injection vulnerability in database.py.
 Use parameterized SQLAlchemy queries and keep the endpoint behavior the same.
 ```
 
-<img width="3314" height="1970" alt="image" src="https://github.com/user-attachments/assets/c90ce687-5fd6-4072-80b4-377a4da42cae" />
+<img alt="9" src="images/9.png">
 
 **✅ Checkpoint**: The search endpoint no longer interpolates raw user input into SQL.
 
@@ -257,7 +256,7 @@ Run the application project after the fixes and verify:
 
 Bob may run commands, create test files, inspect outputs, and make a final correction pass if needed.
 
-<img width="3319" height="1970" alt="image" src="https://github.com/user-attachments/assets/c91f09b5-d093-479c-b826-9771a6e91c86" />
+<img alt="10" src="images/10.png">
 
 ## 6.2: Review the final state
 
