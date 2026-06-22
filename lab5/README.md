@@ -52,7 +52,7 @@ By the end of this lab, you will:
 
 Download the legacy application ZIP file [here](legacy-app.zip). Extract it to a new local folder and open the extracted project in IBM Bob before starting the lab.
 
-<img width="3330" height="1985" alt="image" src="https://github.com/user-attachments/assets/9d22db97-cc06-46fe-b0e3-d7ef7a3839a0" />
+<img alt="1" src="images/1.png">
 
 The sample includes models and services such as:
 - [`legacy/src/main/java/com/example/ecommerce/model/Product.java`](legacy/src/main/java/com/example/ecommerce/model/Product.java)
@@ -67,7 +67,7 @@ The sample includes models and services such as:
 
 Change to **Ask Mode**.
 
-<img width="3330" height="1972" alt="image" src="https://github.com/user-attachments/assets/3f5aa026-c2e3-4890-ac1a-e0a06c933db0" />
+<img alt="2" src="images/2.png">
 
 ## 1.3: Ask Bob for a modernization assessment
 
@@ -81,7 +81,7 @@ Analyze the legacy Java application in legacy and explain:
 4. Which changes are language-level versus dependency-level
 ```
 
-<img width="3308" height="1977" alt="image" src="https://github.com/user-attachments/assets/cdd0196d-ecf7-4899-bfc9-96a6281a7ab4" />
+<img alt="3" src="images/3.png">
 
 **✅ Checkpoint**: You understand the main modernization opportunities.
 
@@ -93,7 +93,7 @@ Analyze the legacy Java application in legacy and explain:
 
 Change to **Plan Mode**.
 
-<img width="3337" height="1976" alt="image" src="https://github.com/user-attachments/assets/6b2f9e7c-9dab-4f95-a829-02b5a036b47d" />
+<img alt="4" src="images/4.png">
 
 ## 2.2: Ask Bob to create the migration structure
 
@@ -115,7 +115,7 @@ Bob may recommend creating folders such as:
 
 That is expected. These folders are part of the modernization workflow and do not need to exist before the lab begins.
 
-<img width="3829" height="2275" alt="image" src="https://github.com/user-attachments/assets/481ac00f-7e55-4ad2-87df-ac69241a19a6" />
+<img alt="5" src="images/5.png">
 
 **✅ Checkpoint**: You have a structured migration plan before editing code.
 
