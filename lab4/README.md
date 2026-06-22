@@ -52,7 +52,7 @@ By the end of this lab, you will:
 
 Download the lab files ZIP [here](source.zip). Extract it to a new local folder and open that extracted folder in IBM Bob before starting the exercise.
 
-<img width="3330" height="1985" alt="image" src="https://github.com/user-attachments/assets/9d22db97-cc06-46fe-b0e3-d7ef7a3839a0" />
+<img alt="1" src="images/1.png">
 
 Review the code structure and pay attention to:
 - Class-based design
@@ -68,7 +68,7 @@ Review the code structure and pay attention to:
 
 Change to **Ask Mode**.
 
-<img width="3342" height="1977" alt="image" src="https://github.com/user-attachments/assets/b369b460-94be-471e-9e7d-5133f41f9d0d" />
+<img alt="2" src="images/2.png">
 
 ## 1.3: Ask Bob to explain the code
 
@@ -82,7 +82,7 @@ Analyze source/data_processor.py and explain:
 4. Which parts may need special handling in JavaScript
 ```
 
-<img width="3331" height="1977" alt="image" src="https://github.com/user-attachments/assets/1e31a788-ef06-4756-8336-8164a97e992b" />
+<img alt="3" src="images/3.png">
 
 Bob should identify file Input/Output, list processing, JSON export, and the `DataProcessor` class design.
 
@@ -113,7 +113,7 @@ Bob should highlight differences such as:
 
 Change to **Plan Mode**.
 
-<img width="3307" height="1979" alt="image" src="https://github.com/user-attachments/assets/ef0175a2-0ef6-4a71-aa5c-9a31780c5fb3" />
+<img alt="4" src="images/4.png">
 
 ## 2.2: Create a translation mapping
 
@@ -141,7 +141,7 @@ Bob should produce a clear mapping before any code is written.
 
 Change to **Code Mode**.
 
-<img width="3314" height="1980" alt="image" src="https://github.com/user-attachments/assets/a5e473a6-9dd7-4da4-a1d2-1604c83ea416" />
+<img alt="5" src="images/5.png">
 
 ## 3.2: Create or update the package configuration
 
@@ -170,7 +170,7 @@ Include:
 
 Bob should generate the translated implementation in the `solution/` folder.
 
-<img width="3321" height="1983" alt="image" src="https://github.com/user-attachments/assets/d397b1de-24a6-4685-82e5-ec6d96ca79e2" />
+<img alt="6" src="images/6.png">
 
 **✅ Checkpoint**: The JavaScript version has been created.
 
@@ -202,7 +202,7 @@ Compare their outputs and confirm whether both implementations create equivalent
 
 Review the generated output and result files together.
 
-<img width="3319" height="1971" alt="image" src="https://github.com/user-attachments/assets/0b34dab7-f4f5-4222-860f-0a8e95b3af66" />
+<img alt="7" src="images/7.png">
 
 **✅ Checkpoint**: Both implementations behave consistently.
 
