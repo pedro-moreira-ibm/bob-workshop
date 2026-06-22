@@ -37,4 +37,4 @@ By the end of these labs, participants will have practiced using IBM Bob to supp
 
 * Analyze a legacy Java 8 application.
 * Identify modernization opportunities.
-* Modernize the codebase toward Java 17 or Java 21.
+* Modernize the codebase toward Java 17.
