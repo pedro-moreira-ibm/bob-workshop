@@ -70,7 +70,7 @@ Understanding when to use each mode is one of the key productivity gains when wo
 
 Extract the provided ZIP file and open that extracted folder in IBM Bob before starting the exercise.
 
-<img width="3418" height="1984" alt="image" src="https://github.com/user-attachments/assets/4f3e7f4f-3c48-4403-831e-48a855736e6a" />
+<img alt="1" src="images/1.png">
 
 **✅ Checkpoint**: The project is now open in your workspace.
 
@@ -88,21 +88,21 @@ Then, open the frontend.
 
 Open your application's frontend by right-clicking the `index.html` file and then selecting "Open with Live Server".
 
-<img width="3423" height="1905" alt="image" src="https://github.com/user-attachments/assets/32e91123-8189-40b9-85f7-7fcb80f30b1f" />
+<img alt="2" src="images/2.png">
 
-<img width="3428" height="1910" alt="image" src="https://github.com/user-attachments/assets/3f0c75d7-c387-4e97-866c-6fba81726bc7" />
+<img alt="3" src="images/3.png">
 
 **For macOS Users**:
 
 Right-click the `index.html` file and select "Reveal in Finder"
 
-<img width="1914" height="1046" alt="image" src="https://github.com/user-attachments/assets/c61134bf-6dc1-4379-bbdb-ac1cc56fb489" />
+<img alt="4" src="images/4.png">
 
 Then just open the file in your browser of choice.
 
-<img width="2340" height="1000" alt="image" src="https://github.com/user-attachments/assets/8ea0195b-bcb9-4b40-8b88-15086d537549" />
+<img alt="5" src="images/5.png">
 
-<img width="3829" height="2180" alt="image" src="https://github.com/user-attachments/assets/732e02f3-11c0-43e0-ae17-3e88ff2dc2a2" />
+<img alt="6" src="images/6.png">
 
 Feel free to explore the application and try it out before you advance with the lab.
 
@@ -132,7 +132,7 @@ Please analyze this application and explain:
 4. Diagram
 ```
 
-<img width="3391" height="1988" alt="image" src="https://github.com/user-attachments/assets/4cfffb99-b681-4095-8852-938b4290a2d4" />
+<img alt="7" src="images/7.png">
 
 Bob will analyze the existing codebase and help you quickly understand how the application works.
 
@@ -158,11 +158,11 @@ Still in **Ask Mode**, ask Bob:
 If I want to add a button that deletes all completed tasks, which files would I need to modify and how?
 ```
 
-<img width="3387" height="1972" alt="image" src="https://github.com/user-attachments/assets/1990cc0f-9473-4d1d-8386-82e3e2d0fb8c" />
+<img alt="8" src="images/8.png">
 
 Bob will explain what files require changes to implement this feature. Notice that no code is being written yet — Bob is just helping you understand the implementation strategy first.
 
-<img width="3405" height="1986" alt="image" src="https://github.com/user-attachments/assets/4b1b7560-7489-4220-a297-b98a5aada59d" />
+<img alt="9" src="images/9.png">
 
 This separation between planning and implementation is extremely important in real-world development workflows.
 
@@ -186,7 +186,7 @@ In this case, we will open the Frontend/index.html.
 
 Click on the literate coding mode icon, with the target file open.
 
-<img width="3434" height="1977" alt="image" src="https://github.com/user-attachments/assets/651ed605-cdb6-42fc-b7e6-e47777658356" />
+<img alt="10" src="images/10.png">
 
 ## 4.3: Make the change that Bob suggested for that file
 
@@ -194,15 +194,15 @@ If Bob told you the exact line where changes need to be made, select it and writ
 
 If it didn't (like in this case), simply select a random line and ask Bob to implement what he suggested.
 
-<img width="3429" height="1970" alt="image" src="https://github.com/user-attachments/assets/2fbbd2c3-27c8-443f-9f27-c9f8e828e872" />
+<img alt="11" src="images/11.png">
 
 Then Click on 'Generate'.
 
-<img width="3370" height="1968" alt="image" src="https://github.com/user-attachments/assets/425f8a5d-2945-4545-913c-4b0b1b6675e2" />
+<img alt="12" src="images/12.png">
 
 ## 4.4: Review the changes and accept them
 
-<img width="3400" height="1977" alt="image" src="https://github.com/user-attachments/assets/fa0601e6-6b81-4e68-aa64-49383526427f" />
+<img alt="13" src="images/13.png">
 
 ---
 
@@ -212,7 +212,7 @@ Then Click on 'Generate'.
 
 In order to finish implementing this new feature, let's switch to **Code Mode**.
 
-<img width="3400" height="1974" alt="image" src="https://github.com/user-attachments/assets/56230a9a-b3c7-4577-b8f8-9725ab066908" />
+<img alt="14" src="images/14.png">
 
 Unlike Ask Mode, Code Mode can:
 - Modify files
@@ -287,19 +287,19 @@ Run the backend application.
 
 Open your application's frontend by right-clicking the `index.html` file and then selecting "Open with Live Server".
 
-<img width="3423" height="1905" alt="image" src="https://github.com/user-attachments/assets/32e91123-8189-40b9-85f7-7fcb80f30b1f" />
+<img alt="15" src="images/15.png">
 
-<img width="3428" height="1910" alt="image" src="https://github.com/user-attachments/assets/3f0c75d7-c387-4e97-866c-6fba81726bc7" />
+<img alt="16" src="images/16.png">
 
 **For macOS Users**:
 
 Right-click the `index.html` file and select "Reveal in Finder"
 
-<img width="1914" height="1046" alt="image" src="https://github.com/user-attachments/assets/c61134bf-6dc1-4379-bbdb-ac1cc56fb489" />
+<img alt="17" src="images/17.png">
 
 Then just open the file in your browser of choice.
 
-<img width="2340" height="1000" alt="image" src="https://github.com/user-attachments/assets/8ea0195b-bcb9-4b40-8b88-15086d537549" />
+<img alt="18" src="images/18.png">
 
 
 **✅ Checkpoint**: Frontend loads and displays the User Interface.
@@ -314,7 +314,7 @@ Example test:
 3. Click the new "Delete Completed" button
 4. ✅ Completed tasks should be removed
 
-<img width="3782" height="2053" alt="image" src="https://github.com/user-attachments/assets/8fca3fae-fc5a-4077-949e-4c9ca5b0af3c" />
+<img alt="19" src="images/19.png">
 
 If the application does not work correctly, ask Bob to:
 - Analyze the issue
@@ -336,13 +336,13 @@ To do this, you will create a custom Bob mode specialized in writing technical d
 
 Go to **Settings** and open the **Modes** tab.
 
-<img width="3393" height="1980" alt="image" src="https://github.com/user-attachments/assets/1ad9f355-7f25-437d-9180-6e4e90cccdad" />
+<img alt="20" src="images/20.png">
 
 ## 7.2: Start creating a new mode
 
 Click the **+** icon to create a new mode.
 
-<img width="2982" height="1812" alt="image" src="https://github.com/user-attachments/assets/ec65fa91-ac99-4f07-90a5-366c7ef3cd55" />
+<img alt="21" src="images/21.png">
 
 ## 7.3: Define the new mode
 
@@ -353,7 +353,7 @@ When prompted for the installation scope, you have two options:
 
 Fill in the mode details using the information below:
 
-<img width="1676" height="1625" alt="image" src="https://github.com/user-attachments/assets/6a2da509-d52d-4b1d-8a3c-7d630d629b97" />
+<img alt="22" src="images/22.png">
 
 Slug:
 
@@ -405,7 +405,7 @@ Available tools: Read files + Edit files + Execute commands
 
 Make sure the newly created **Documentation Writer** mode is selected.
 
-<img width="2986" height="1833" alt="image" src="https://github.com/user-attachments/assets/0282c099-e2ba-4742-b5c6-3bacdcc912dd" />
+<img alt="23" src="images/23.png">
 
 ## 7.5: Generate the documentation
 
@@ -415,11 +415,11 @@ Ask Bob:
 Generate documentation for my backend app. Do not create a new file; instead, add comments directly in the code where useful.
 ```
 
-<img width="3418" height="1965" alt="image" src="https://github.com/user-attachments/assets/186b2218-2c7a-4283-bc27-5815c5dc5b6d" />
+<img alt="24" src="images/24.png">
 
 Bob will analyze the backend code and add documentation comments to the relevant file or files.
 
-<img width="3389" height="1959" alt="image" src="https://github.com/user-attachments/assets/c6f85e32-8de2-4950-8280-55e4a0d9b40c" />
+<img alt="25" src="images/25.png">
 
 **✅ Checkpoint:** The Documentation Writer mode is created, selected, and used to generate documentation directly in the code.
 
@@ -433,7 +433,7 @@ After Bob completes a review, any identified issues are displayed in the **Bob F
 
 Select **Bob Findings** from the left-hand panel.
 
-<img width="2991" height="1821" alt="image" src="https://github.com/user-attachments/assets/734a5e92-c00e-4bf2-8d13-13fc667091a1" />
+<img alt="26" src="images/26.png">
 
 Bob may display findings or improvement suggestions for specific files in your project.
 
@@ -441,25 +441,25 @@ Bob may display findings or improvement suggestions for specific files in your p
 
 Select one of the findings. Bob has analyzed the selected file and displayed the detected vulnerabilities.
 
-<img width="3016" height="1832" alt="image" src="https://github.com/user-attachments/assets/1cfdabe5-6402-4886-b2be-53483bb81ee4" />
+<img alt="27" src="images/27.png">
 
 ## 8.3: Go to the finding location
 
 Click **Go to location**. Bob will open the relevant file and take you to the exact line where the finding was detected.
 
-<img width="3009" height="1828" alt="image" src="https://github.com/user-attachments/assets/1f20ad6b-bec9-41d2-b3b9-abefcbde10e0" />
+<img alt="28" src="images/28.png">
 
 ## 8.4: Fix the finding with Bob
 
 Click **Fix with Bob**. Bob will start working on the file and show the suggested changes in the usual panel on the right.
 
-<img width="3015" height="1841" alt="image" src="https://github.com/user-attachments/assets/37d4bb82-0baf-49a9-82f1-8a47032a7ccb" />
+<img alt="29" src="images/29.png">
 
 ## 8.5: Review the changes
 
 Review Bob’s proposed changes carefully before accepting them.
 
-<img width="3001" height="1824" alt="image" src="https://github.com/user-attachments/assets/5d0be4a7-cd9c-4bbf-9617-2fab86abe4ec" />
+<img alt="30" src="images/30.png">
 
 **✅ Checkpoint:** You reviewed a Bob Finding, navigated to the affected code, and used Bob to propose a fix.
 
