@@ -57,7 +57,7 @@ By the end of this lab, you will:
 
 ## 1.1: Open the starter project
 
-Open the [`starter/`](starter/) folder in IBM Bob.
+Download the starter ZIP file [here](starter.zip). Extract it to a new local folder and open the extracted project in IBM Bob before starting the lab.
 
 The starter contains a React incident dashboard:
 - [`starter/src/App.jsx`](starter/src/App.jsx) for the dashboard UI and local interactions
