@@ -67,7 +67,7 @@ The starter contains a React incident dashboard:
 
 <!-- TODO: Add screenshot of opening the starter folder in Bob here -->
 
-**Checkpoint**: The React starter project is open in your Bob workspace.
+**✅ Checkpoint**: The React starter project is open in your Bob workspace.
 
 ## 1.2: Run the React dashboard
 
@@ -88,7 +88,7 @@ You should see a customer operations incident dashboard with KPI tiles, status f
 
 <!-- TODO: Add screenshot of initial React dashboard here -->
 
-**Checkpoint**: The dashboard is visible and interactive, but it is still using mock data.
+**✅ Checkpoint**: The dashboard is visible and interactive, but it is still using mock data.
 
 ## 1.3: Try the prototype behavior
 
@@ -100,7 +100,7 @@ Use the dashboard before changing anything:
 
 This is the key starting point for the lab: the interface looks like a real product, but there is no backend yet.
 
-**Checkpoint**: You understand what Bob will help make real.
+**✅ Checkpoint**: You understand what Bob will help make real.
 
 ---
 
@@ -124,7 +124,7 @@ Analyze this React dashboard and explain:
 
 Bob should identify that the dashboard currently depends on `mockIncidents.js`, local React state, and local functions for status movement and escalation.
 
-**Checkpoint**: You understand the current frontend and what backend capabilities it needs.
+**✅ Checkpoint**: You understand the current frontend and what backend capabilities it needs.
 
 ## 2.2: Ask Bob to map frontend actions to API calls
 
@@ -137,7 +137,7 @@ Include loading states, error states, and which React state should be replaced b
 
 Bob should recommend API endpoints for listing incidents, getting metrics, changing status, and escalating an incident.
 
-**Checkpoint**: You know which frontend behavior should move from mock data to real backend calls.
+**✅ Checkpoint**: You know which frontend behavior should move from mock data to real backend calls.
 
 ---
 
@@ -173,7 +173,7 @@ The target public API should include:
 - `PATCH /api/incidents/{id}/escalate`
 - `GET /api/incidents/metrics`
 
-**Checkpoint**: You have a backend plan before generating code.
+**✅ Checkpoint**: You have a backend plan before generating code.
 
 ## 3.2: Review the plan
 
@@ -183,7 +183,7 @@ Before switching to Code Mode, review Bob's plan and confirm:
 - Authentication is intentionally out of scope
 - The backend can run locally without external services
 
-**Checkpoint**: The implementation scope is clear and workshop-friendly.
+**✅ Checkpoint**: The implementation scope is clear and workshop-friendly.
 
 ---
 
@@ -225,7 +225,7 @@ Implement these endpoints:
 
 Bob should create the backend structure and explain the generated files.
 
-**Checkpoint**: The C# backend files have been generated.
+**✅ Checkpoint**: The C# backend files have been generated.
 
 ## 4.2: Run the backend
 
@@ -247,7 +247,7 @@ or:
 https://localhost:5001
 ```
 
-**Checkpoint**: The backend starts without errors.
+**✅ Checkpoint**: The backend starts without errors.
 
 ## 4.3: Open Swagger
 
@@ -260,7 +260,7 @@ Use Swagger to test:
 
 <!-- TODO: Add screenshot of Swagger showing the incident API here -->
 
-**Checkpoint**: The generated API can be tested independently from the frontend.
+**✅ Checkpoint**: The generated API can be tested independently from the frontend.
 
 ---
 
@@ -284,7 +284,7 @@ Update the frontend so that:
 
 Bob should modify the React code so the dashboard uses real backend data.
 
-**Checkpoint**: The React app no longer depends on mock data for the main dashboard flow.
+**✅ Checkpoint**: The React app no longer depends on mock data for the main dashboard flow.
 
 ## 5.2: Run frontend and backend together
 
@@ -299,7 +299,7 @@ Open the React app again and confirm the dashboard still looks the same, but is 
 
 <!-- TODO: Add screenshot of dashboard connected to .NET backend here -->
 
-**Checkpoint**: The same visual dashboard now uses real backend data.
+**✅ Checkpoint**: The same visual dashboard now uses real backend data.
 
 ---
 
@@ -327,7 +327,7 @@ Frontend:
 4. Show a useful error message if the API call fails
 ```
 
-**Checkpoint**: Escalating an incident updates both the backend and the visible dashboard.
+**✅ Checkpoint**: Escalating an incident updates both the backend and the visible dashboard.
 
 ## 6.2: Test the visual behavior
 
@@ -341,7 +341,7 @@ In the browser:
 
 <!-- TODO: Add screenshot of incident escalation feature here -->
 
-**Checkpoint**: Participants can clearly see Bob's full-stack change working.
+**✅ Checkpoint**: Participants can clearly see Bob's full-stack change working.
 
 ---
 
@@ -364,7 +364,7 @@ Cover:
 
 Bob should create a test project or test folder and wire it to the backend.
 
-**Checkpoint**: The backend has automated test coverage for the main behavior.
+**✅ Checkpoint**: The backend has automated test coverage for the main behavior.
 
 ## 7.2: Run validation
 
@@ -382,13 +382,11 @@ Verify:
 
 If anything fails, ask Bob to inspect the error, identify the root cause, and apply a correction.
 
-**Checkpoint**: The lab ends with a working, tested, visual full-stack application.
+**✅ Checkpoint**: The lab ends with a working, tested, visual full-stack application.
 
 ---
 
-# Congratulations
-
-You have completed Lab 6.
+# Congratulations 🎉 You’ve completed Lab 6!
 
 You successfully used Bob to:
 - Analyze a visual React prototype
