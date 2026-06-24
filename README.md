@@ -38,3 +38,9 @@ By the end of these labs, participants will have practiced using IBM Bob to supp
 * Analyze a legacy Java 8 application.
 * Identify modernization opportunities.
 * Modernize the codebase toward Java 17.
+
+### Lab 6: Build a Visual .NET + React Dashboard 📊
+
+* Analyze a visual React dashboard prototype.
+* Generate a C# ASP.NET Core Web API backend.
+* Connect the UI to real backend data and add a visible full-stack feature.
