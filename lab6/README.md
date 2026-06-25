@@ -2,9 +2,9 @@
 
 ## Overview
 
-In this lab, you'll use Bob to turn a visual React incident dashboard prototype into a working full-stack application powered by a C# ASP.NET Core backend.
+In this lab, you'll use Bob to turn a visual React incident operations dashboard into a working full-stack application powered by a C# ASP.NET Core backend.
 
-Unlike a backend-only exercise, this lab starts with something participants can immediately see and interact with. The dashboard already looks real, but it uses mock data. Bob will help you analyze the frontend, plan the backend API, generate the .NET project, connect the UI to real data, and add a visible full-stack feature.
+Unlike a backend-only exercise, this lab starts with something participants can immediately see and interact with. The dashboard already has a realistic queue/workbench experience, but it uses local mock data. Bob will help you analyze the frontend, plan the backend API, generate the .NET project, connect the UI to real data, and add a visible full-stack feature.
 
 ## Before Starting
 
@@ -22,18 +22,18 @@ Helpful but not required:
 ## What You'll Build
 
 A customer operations incident dashboard with:
-- **Frontend**: React dashboard with filters, KPI tiles, incident cards, and actions
+- **Frontend**: React dashboard with KPI tiles, status filters, a coverage panel, incident queue rows, and actions
 - **Backend**: C# ASP.NET Core Web API
 - **Database**: EF Core with SQLite
 - **Feature**: Escalate incidents and see the UI update
 - **Validation**: Swagger/OpenAPI and xUnit tests
 
-The starter app begins with mock incident data. During the lab, Bob will help you replace that fake data with a real .NET API.
+The starter app begins with local mock incident data. During the lab, Bob will help you replace that data flow with a real .NET API.
 
 ## What You'll Learn
 
 By the end of this lab, you will:
-- ✅ Use Bob to understand an existing React prototype
+- ✅ Use Bob to understand an existing React dashboard
 - ✅ Plan a backend API contract from frontend requirements
 - ✅ Generate an ASP.NET Core Web API with EF Core and SQLite
 - ✅ Configure CORS and Swagger for a full-stack workflow
@@ -43,7 +43,7 @@ By the end of this lab, you will:
 
 ## Lab Structure
 
-- [Open the visual React prototype](#step-1-open-the-visual-react-prototype)
+- [Open the visual React dashboard](#step-1-open-the-visual-react-dashboard)
 - [Analyze the frontend with Bob](#step-2-analyze-the-frontend-with-bob)
 - [Plan the C# .NET backend](#step-3-plan-the-c-net-backend)
 - [Generate the ASP.NET Core backend](#step-4-generate-the-aspnet-core-backend)
@@ -53,7 +53,7 @@ By the end of this lab, you will:
 
 ---
 
-# Step 1: Open the visual React prototype
+# Step 1: Open the visual React dashboard
 
 ## 1.1: Open the starter project
 
@@ -61,8 +61,9 @@ Open the [`starter/`](starter/) folder in IBM Bob.
 
 The starter contains a React incident dashboard:
 - [`starter/src/App.jsx`](starter/src/App.jsx) for the dashboard UI and local interactions
-- [`starter/src/mockIncidents.js`](starter/src/mockIncidents.js) for fake incident data
+- [`starter/src/mockIncidents.js`](starter/src/mockIncidents.js) for local starter incident data
 - [`starter/src/styles.css`](starter/src/styles.css) for the visual layout
+- [`starter/vite.config.js`](starter/vite.config.js) for the React/Vite build configuration
 - [`starter/backend-placeholder.md`](starter/backend-placeholder.md) to clarify that the .NET backend will be generated during the lab
 
 <!-- TODO: Add screenshot of opening the starter folder in Bob here -->
@@ -74,8 +75,17 @@ The starter contains a React incident dashboard:
 Ask Bob to install the frontend dependencies and start the React dashboard:
 
 ```text
-Please get this React starter app running locally. Install any required frontend dependencies, start the development server, and tell me which local URL I should open in the browser.
+Please get this React starter app running locally from the starter folder and tell me which local URL I should open in the browser.
 ```
+
+Bob should install the frontend dependencies and start the Vite development server. If you run the commands yourself, use:
+
+```bash
+npm install
+npm run dev
+```
+
+Do not open `index.html` directly or use a generic static server such as Live Server or `python -m http.server`. This starter uses React imports and JSX, so it must be served by Vite from the `starter/` folder.
 
 Open the local URL shown in the terminal, usually:
 
@@ -83,21 +93,23 @@ Open the local URL shown in the terminal, usually:
 http://localhost:5173
 ```
 
-You should see a customer operations incident dashboard with KPI tiles, status filters, incident cards, priority badges, and action buttons.
+You should see a customer operations incident dashboard with a top workspace bar, KPI tiles, status filters, a coverage panel, incident queue rows, priority badges, and action buttons.
+
+If the page is blank or shows a startup error, confirm that Bob is running the app from `lab6/starter`, that dependencies were installed in that folder, and that the app is being served by `npm run dev`. The starter includes `vite.config.js`, which enables the React/Vite build path required for JSX.
 
 <!-- TODO: Add screenshot of initial React dashboard here -->
 
 **✅ Checkpoint**: The dashboard is visible and interactive, but it is still using mock data.
 
-## 1.3: Try the prototype behavior
+## 1.3: Try the starter behavior
 
 Use the dashboard before changing anything:
 - Filter incidents by status
-- Click **Move status**
+- Click **Update status**
 - Click **Escalate**
 - Notice that the UI changes locally
 
-This is the key starting point for the lab: the interface looks like a real product, but there is no backend yet.
+This is the key starting point for the lab: the interface behaves like a real operations tool, but there is no backend yet.
 
 **✅ Checkpoint**: You understand what Bob will help make real.
 
@@ -111,13 +123,13 @@ Change to **Ask Mode**.
 
 <!-- TODO: Add screenshot of Ask Mode selected here -->
 
-Ask Bob to explain the prototype before making any changes:
+Ask Bob to explain the dashboard before making any changes. The goal is to understand the existing behavior and data flow before asking Bob to generate new backend code.
 
 ```text
-Please analyze this React incident dashboard before we change it. Explain how the main components are organized, where the mock incident data is coming from, which user actions are currently handled only in the frontend, and what kind of backend API the dashboard will need when we replace the mock data.
+Please analyze this React incident dashboard before we change it. Explain how it is organized, where the starter incident data comes from, which user actions are currently handled only in the frontend, and what backend capabilities will be needed when we make the dashboard real.
 ```
 
-Bob should identify that the dashboard currently depends on `mockIncidents.js`, local React state, and local functions for status movement and escalation.
+Bob should identify that the dashboard currently depends on `mockIncidents.js`, local React state, and local functions for status movement, filtering, metrics, and escalation.
 
 **✅ Checkpoint**: You understand the current frontend and what backend capabilities it needs.
 
@@ -126,7 +138,7 @@ Bob should identify that the dashboard currently depends on `mockIncidents.js`, 
 Still in **Ask Mode**, ask Bob to connect the visual behavior to backend needs:
 
 ```text
-Please walk through each interaction in the dashboard and explain what should eventually happen on the backend. Include the incident list, metrics, status changes, escalation, loading states, error states, and which parts of the current React state should be replaced by data from the API.
+Please walk through the main dashboard interactions and explain what should eventually happen on the backend. Include the incident queue, metrics, status changes, escalation, loading states, error states, and which parts of the current React state should be replaced by API data.
 ```
 
 Bob should recommend API endpoints for listing incidents, getting metrics, changing status, and escalating an incident.
@@ -143,10 +155,10 @@ Change to **Plan Mode**.
 
 <!-- TODO: Add screenshot of Plan Mode selected here -->
 
-Ask Bob to plan the backend in natural language, while keeping the target stack clear:
+Ask Bob to plan the backend in natural language, while keeping the target stack clear. The details after the prompt are there to help you review the plan, not to force a single implementation style.
 
 ```text
-I want to make this React dashboard real with a C# backend. Please create an implementation plan using ASP.NET Core Web API, EF Core, SQLite, Swagger/OpenAPI, and xUnit tests. Explain the recommended project structure, the Incident model, the API endpoints the frontend needs, how seed data should work, how CORS should be configured for the React dev server, and how we should validate the result.
+I want to make this React dashboard real with a C# backend. Please create an implementation plan using ASP.NET Core Web API, EF Core, SQLite, Swagger/OpenAPI, and xUnit tests. Include the recommended project structure, the Incident model, the API the frontend needs, seed data, CORS for the React dev server, and validation steps.
 ```
 
 The target public API should include:
@@ -156,6 +168,8 @@ The target public API should include:
 - `PATCH /api/incidents/{id}/status`
 - `PATCH /api/incidents/{id}/escalate`
 - `GET /api/incidents/metrics`
+
+The incident model should cover the fields the dashboard already displays, including title, customer, service, priority, status, owner/assignee, SLA target, created time, and description. The metrics endpoint can return counts such as active incidents, critical priority incidents, SLA-risk incidents, and resolved incidents.
 
 **✅ Checkpoint**: You have a backend plan before generating code.
 
@@ -179,7 +193,7 @@ Change to **Code Mode**.
 
 <!-- TODO: Add screenshot of Code Mode selected here -->
 
-Ask Bob to generate the backend from the plan:
+Ask Bob to generate the backend from the plan. This prompt gives Bob the required stack and outcome, while still leaving room for Bob to choose a reasonable ASP.NET Core project structure.
 
 ```text
 Please create the ASP.NET Core backend for this dashboard in a new backend folder. Use .NET 8, EF Core with SQLite, Swagger/OpenAPI, and CORS for the React development server at http://localhost:5173. Seed the database with incident records that match the current React mock data, and include the model, database context, controller, configuration, and startup code needed for the dashboard API.
@@ -235,7 +249,7 @@ Use Swagger to test:
 Still in **Code Mode**, ask Bob to connect the existing UI to the new API:
 
 ```text
-Please connect the React dashboard to the ASP.NET Core backend we created. Replace the main mock-data flow with real API calls for loading incidents, loading metrics, moving an incident to the next status, and escalating an incident. Keep the dashboard visually consistent, add useful loading and error states, and leave the mock data file only as a reference or fallback.
+Please connect the React dashboard to the ASP.NET Core backend we created. Replace the main local-data flow with API calls for loading incidents, loading metrics, updating status, and escalating an incident. Keep the dashboard visually consistent and add useful loading and error states.
 ```
 
 Bob should modify the React code so the dashboard uses real backend data.
@@ -250,7 +264,7 @@ Ask Bob to run both parts of the application together:
 Please run the backend and frontend together and verify that the React dashboard is loading incidents from the .NET API instead of the mock data. If anything fails, explain the root cause and fix it.
 ```
 
-Open the React app again and confirm the dashboard still looks the same, but is now backed by C# .NET.
+Open the React app again and confirm the dashboard still has the same queue/workbench experience, but is now backed by C# .NET.
 
 <!-- TODO: Add screenshot of dashboard connected to .NET backend here -->
 
@@ -262,13 +276,15 @@ Open the React app again and confirm the dashboard still looks the same, but is 
 
 ## 6.1: Implement incident escalation
 
-The starter already has an **Escalate** button that changes local mock state. Now use Bob to make that behavior real across frontend and backend.
+The starter already has an **Escalate** button that changes local state. Now use Bob to make that behavior real across frontend and backend.
 
-Ask Bob to make the escalation feature real across the full stack:
+Ask Bob to make the escalation feature real across the full stack. The important behavior is that escalation becomes persistent, visible, and repeat-safe.
 
 ```text
-Please make the Escalate button a real full-stack feature. When a user escalates an incident, the backend should persist the change in SQLite, set the priority to Critical, and reopen the incident if it was already Resolved. The frontend should call the backend, refresh the incident list and metrics, visibly update the priority badge, and show a useful error message if the request fails.
+Please make the Escalate button a real full-stack feature. When a user escalates an incident, the backend should persist the change in SQLite, set the priority to Critical, and reopen the incident if it was already Resolved. The frontend should call the backend, refresh the incident list and metrics, visibly update the queue, and show a useful error message if the request fails.
 ```
+
+Escalation should be repeat-safe: clicking **Escalate** more than once should not duplicate text, create repeated history noise, or keep changing an already active Critical incident.
 
 **✅ Checkpoint**: Escalating an incident updates both the backend and the visible dashboard.
 
@@ -279,8 +295,9 @@ In the browser:
 2. Click **Escalate**
 3. Confirm the priority changes to **Critical**
 4. Confirm the critical metric increases
-5. Refresh the page
-6. Confirm the change persists
+5. Click **Escalate** again and confirm the UI does not duplicate any notes or repeatedly mutate the incident
+6. Refresh the page
+7. Confirm the change persists
 
 <!-- TODO: Add screenshot of incident escalation feature here -->
 
@@ -319,7 +336,7 @@ If anything fails, ask Bob to inspect the error, identify the root cause, and ap
 # Congratulations 🎉 You’ve completed Lab 6!
 
 You successfully used Bob to:
-- ✅ Analyze a visual React prototype
+- ✅ Analyze a visual React dashboard
 - ✅ Infer backend requirements from frontend behavior
 - ✅ Plan and generate a C# ASP.NET Core API
 - ✅ Configure EF Core, SQLite, Swagger, and CORS
@@ -327,4 +344,4 @@ You successfully used Bob to:
 - ✅ Add a visible full-stack feature
 - ✅ Generate tests and validate the application
 
-This lab demonstrates Bob's value in a way participants can see immediately: a static prototype becomes a working product.
+This lab demonstrates Bob's value in a way participants can see immediately: a local frontend experience becomes a working full-stack product.
