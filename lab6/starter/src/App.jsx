@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { mockIncidents } from './mockIncidents.js';
 
 const statusFilters = ['All', 'Open', 'In Progress', 'Resolved'];
@@ -11,9 +11,14 @@ const priorityRank = {
 };
 
 function calculateMetrics(incidents) {
+  const activeIncidents = incidents.filter((incident) => incident.status !== 'Resolved');
+
   return {
-    open: incidents.filter((incident) => incident.status !== 'Resolved').length,
-    critical: incidents.filter((incident) => incident.priority === 'Critical').length,
+    active: activeIncidents.length,
+    critical: activeIncidents.filter((incident) => incident.priority === 'Critical').length,
+    slaRisk: activeIncidents.filter((incident) =>
+      ['Critical', 'High'].includes(incident.priority)
+    ).length,
     resolvedToday: incidents.filter((incident) => incident.status === 'Resolved').length,
   };
 }
@@ -32,6 +37,24 @@ export default function App() {
   const [activeStatus, setActiveStatus] = useState('All');
 
   const metrics = useMemo(() => calculateMetrics(incidents), [incidents]);
+  const statusCounts = useMemo(
+    () =>
+      statusFilters.reduce((counts, status) => {
+        counts[status] =
+          status === 'All'
+            ? incidents.length
+            : incidents.filter((incident) => incident.status === status).length;
+        return counts;
+      }, {}),
+    [incidents]
+  );
+  const latestIncident = useMemo(
+    () =>
+      [...incidents].sort(
+        (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      )[0],
+    [incidents]
+  );
 
   const visibleIncidents = useMemo(() => {
     const filtered =
@@ -49,11 +72,14 @@ export default function App() {
           return incident;
         }
 
+        if (incident.priority === 'Critical' && incident.status !== 'Resolved') {
+          return incident;
+        }
+
         return {
           ...incident,
           priority: 'Critical',
           status: incident.status === 'Resolved' ? 'Open' : incident.status,
-          description: `${incident.description} Escalation requested by the support lead.`,
         };
       })
     );
@@ -80,99 +106,182 @@ export default function App() {
 
   return (
     <main className="app-shell">
-      <section className="workspace-header">
+      <header className="app-topbar">
         <div>
           <p className="eyebrow">Customer operations</p>
-          <h1>Incident response dashboard</h1>
-          <p className="header-copy">
-            This React prototype is intentionally visual first. It starts with mock data so Bob can
-            make the experience real with a C# ASP.NET Core backend.
-          </p>
+          <strong>Service incident command center</strong>
         </div>
+        <nav aria-label="Workspace sections">
+          <a href="#incident-queue">Queue</a>
+          <a href="#metrics">Metrics</a>
+          <a href="#coverage">Coverage</a>
+        </nav>
         <div className="api-status">
           <span className="pulse" />
-          Mock data mode
+          Operations view
+        </div>
+      </header>
+
+      <section className="workspace-header" id="metrics">
+        <div>
+          <h1>Incident queue</h1>
+          <p className="header-copy">
+            Prioritize customer-impacting service issues, track ownership, and move response work
+            through triage without losing operational context.
+          </p>
+          <div className="header-meta" aria-label="Dashboard context">
+            <span>Global support queue</span>
+            <span>Latest intake {latestIncident ? formatTime(latestIncident.createdAt) : 'n/a'}</span>
+            <span>{new Set(incidents.map((incident) => incident.service)).size} services monitored</span>
+          </div>
         </div>
       </section>
 
       <section className="metrics-grid" aria-label="Incident metrics">
         <article className="metric-card">
-          <span>Open work</span>
-          <strong>{metrics.open}</strong>
-          <p>Incidents requiring action</p>
+          <span>Active incidents</span>
+          <strong>{metrics.active}</strong>
+          <p>Owned by support and engineering</p>
         </article>
         <article className="metric-card warning">
-          <span>Critical</span>
+          <span>Critical priority</span>
           <strong>{metrics.critical}</strong>
-          <p>Escalated customer issues</p>
+          <p>Executive-visible customer impact</p>
+        </article>
+        <article className="metric-card attention">
+          <span>SLA risk</span>
+          <strong>{metrics.slaRisk}</strong>
+          <p>High-priority work under watch</p>
         </article>
         <article className="metric-card success">
-          <span>Resolved</span>
+          <span>Resolved today</span>
           <strong>{metrics.resolvedToday}</strong>
-          <p>Closed in this demo data</p>
+          <p>Validated and ready for follow-up</p>
         </article>
       </section>
 
-      <section className="toolbar" aria-label="Incident filters">
-        <div className="filter-group">
-          {statusFilters.map((status) => (
-            <button
-              key={status}
-              className={activeStatus === status ? 'filter-button active' : 'filter-button'}
-              type="button"
-              onClick={() => setActiveStatus(status)}
-            >
-              {status}
-            </button>
-          ))}
-        </div>
-        <p>{visibleIncidents.length} incidents shown</p>
-      </section>
-
-      <section className="incident-grid" aria-label="Incident list">
-        {visibleIncidents.map((incident) => (
-          <article className="incident-card" key={incident.id}>
-            <div className="card-topline">
-              <span className={`priority-badge ${incident.priority.toLowerCase()}`}>
-                {incident.priority}
-              </span>
-              <span className={`status-badge ${incident.status.toLowerCase().replace(' ', '-')}`}>
-                {incident.status}
-              </span>
+      <section className="workbench" id="incident-queue">
+        <aside className="queue-summary" id="coverage" aria-label="Queue coverage">
+          <div>
+            <p className="eyebrow">Coverage</p>
+            <h2>Response overview</h2>
+          </div>
+          <dl>
+            <div>
+              <dt>Primary region</dt>
+              <dd>EMEA</dd>
             </div>
-
-            <h2>{incident.title}</h2>
-            <p className="description">{incident.description}</p>
-
-            <dl className="incident-details">
-              <div>
-                <dt>Customer</dt>
-                <dd>{incident.customer}</dd>
-              </div>
-              <div>
-                <dt>Assignee</dt>
-                <dd>{incident.assignee}</dd>
-              </div>
-              <div>
-                <dt>Created</dt>
-                <dd>{formatTime(incident.createdAt)}</dd>
-              </div>
-            </dl>
-
-            <div className="card-actions">
-              <button type="button" onClick={() => moveToNextStatus(incident.id)}>
-                Move status
-              </button>
+            <div>
+              <dt>Intake source</dt>
+              <dd>Support, monitoring, account teams</dd>
+            </div>
+            <div>
+              <dt>Review cadence</dt>
+              <dd>Every 15 minutes</dd>
+            </div>
+          </dl>
+          <div className="status-stack" aria-label="Status breakdown">
+            {statusFilters.slice(1).map((status) => (
               <button
-                className="secondary-action"
+                key={status}
+                className={activeStatus === status ? 'summary-button active' : 'summary-button'}
                 type="button"
-                onClick={() => escalateIncident(incident.id)}
+                onClick={() => setActiveStatus(status)}
               >
-                Escalate
+                <span>{status}</span>
+                <strong>{statusCounts[status]}</strong>
               </button>
+            ))}
+          </div>
+        </aside>
+
+        <section className="incident-panel" aria-label="Incident list">
+          <div className="panel-header">
+            <div>
+              <p className="eyebrow">Live queue</p>
+              <h2>Customer-impacting incidents</h2>
             </div>
-          </article>
-        ))}
+            <p>
+              {visibleIncidents.length} of {incidents.length} shown
+            </p>
+          </div>
+
+          <div className="toolbar" aria-label="Incident filters">
+            <div className="filter-group">
+              {statusFilters.map((status) => (
+                <button
+                  key={status}
+                  className={activeStatus === status ? 'filter-button active' : 'filter-button'}
+                  type="button"
+                  onClick={() => setActiveStatus(status)}
+                >
+                  {status}
+                  <span>{statusCounts[status]}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="incident-list">
+            {visibleIncidents.map((incident) => {
+              const isEscalated = incident.priority === 'Critical' && incident.status !== 'Resolved';
+
+              return (
+                <article
+                  className={`incident-row ${incident.priority.toLowerCase()}`}
+                  key={incident.id}
+                >
+                  <div className="incident-main">
+                    <div className="card-topline">
+                      <span className={`priority-badge ${incident.priority.toLowerCase()}`}>
+                        {incident.priority}
+                      </span>
+                      <span
+                        className={`status-badge ${incident.status
+                          .toLowerCase()
+                          .replace(' ', '-')}`}
+                      >
+                        {incident.status}
+                      </span>
+                    </div>
+                    <h3>{incident.title}</h3>
+                    <p>{incident.description}</p>
+                    <div className="incident-meta">
+                      <span>{incident.customer}</span>
+                      <span>{incident.service}</span>
+                      <span>Opened {formatTime(incident.createdAt)}</span>
+                    </div>
+                  </div>
+
+                  <dl className="incident-details">
+                    <div>
+                      <dt>Owner</dt>
+                      <dd>{incident.assignee}</dd>
+                    </div>
+                    <div>
+                      <dt>SLA target</dt>
+                      <dd>{incident.slaTarget}</dd>
+                    </div>
+                  </dl>
+
+                  <div className="card-actions">
+                    <button type="button" onClick={() => moveToNextStatus(incident.id)}>
+                      Update status
+                    </button>
+                    <button
+                      className="secondary-action"
+                      type="button"
+                      disabled={isEscalated}
+                      onClick={() => escalateIncident(incident.id)}
+                    >
+                      {isEscalated ? 'Escalated' : 'Escalate'}
+                    </button>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
       </section>
     </main>
   );
