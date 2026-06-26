@@ -247,7 +247,7 @@ Do not expose internal stack traces or raw exception details to API clients.
 Ask Bob:
 
 ```text
-Run the application project after the fixes and verify:
+Please verify that after the fixes:
 1. The API still starts
 2. The search endpoint works
 3. Invalid input is handled safely
@@ -256,7 +256,6 @@ Run the application project after the fixes and verify:
 
 Bob may run commands, create test files, inspect outputs, and make a final correction pass if needed.
 
-<img alt="10" src="images/10.png">
 
 ## 6.2: Review the final state
 
