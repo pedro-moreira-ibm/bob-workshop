@@ -232,21 +232,21 @@ Create unit test cases for each of the api endpoints, and ensure at least 90% co
 
 ### 3.6: Run the Backend
 
-Let's ask Bob to run the backend.
+Let's ask Bob how to run the backend.
 
 **Prompt for Bob:**
 
 ```bash
-Run the backend application.
+How can I run the backend application?
 ```
 
-While Bob solves the request, you might see the option to "Proceed while running". By clicking it, you allow Bob to work on independent tasks while a command run when possible.
+Bob should quickly identify the necessary commands to run the backend.
 
 <p align="center">
   <img src="images/8.png" alt="8" width="400"/>
 </p>
 
-Once finished, Bob should let you know that backend application is now running successfully on http://localhost:5000.
+Follow the instructions and run those commands in your terminal.
 
 <img alt="9" src="images/9.png">
 
@@ -261,7 +261,7 @@ Now, let's create the frontend (user interface).
 
 ### 4.1: Create Frontend Structure
 
-**Prompt for Bob (still in Code mode):**
+**Prompt for Bob (still in Agent mode):**
 
 ```
 Create a frontend for the To Do app with:
