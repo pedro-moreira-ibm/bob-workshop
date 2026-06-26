@@ -113,8 +113,6 @@ Bob should highlight differences such as:
 
 Change to **Plan Mode**.
 
-<img alt="4" src="images/4.png">
-
 ## 2.2: Create a translation mapping
 
 Ask Bob:
