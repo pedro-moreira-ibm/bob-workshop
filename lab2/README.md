@@ -30,7 +30,7 @@ By the end of this lab, you will:
 - ✅ Use Bob to understand an unfamiliar codebase
 - ✅ Learn how Bob analyzes project structure and dependencies
 - ✅ Identify which files need to be modified for a feature request
-- ✅ Compare Ask Mode vs Code Mode behaviors
+- ✅ Compare Ask Mode vs Agent Mode behaviors
 - ✅ Understand approval workflows and auto-approvals
 - ✅ Modify an existing full-stack application
 
@@ -39,7 +39,7 @@ By the end of this lab, you will:
 
 This lab demonstrated an important distinction between Bob modes:
 
-| Ask Mode | Code Mode |
+| Ask Mode | Agent Mode |
 |---|---|
 | Understands and explains code | Modifies and generates code |
 | Helps with architecture analysis | Implements features |
