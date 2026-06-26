@@ -189,15 +189,15 @@ That creates risk even when the issue is not a classic injection vulnerability.
 
 ---
 
-# Step 5: Implement fixes with Code Mode
+# Step 5: Implement fixes with Agent Mode
 
-## 5.1: Switch to Code Mode
+## 5.1: Switch to Agent Mode
 
-Change to **Code Mode**.
+Change to **Agent Mode**.
 
 <img alt="8" src="images/8.png">
 
-Code Mode can now use your analysis and remediation plan to modify the project.
+Agent Mode can now use your analysis and remediation plan to modify the project.
 
 ## 5.2: Fix the SQL injection issue
 
