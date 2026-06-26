@@ -208,13 +208,13 @@ Then Click on 'Generate'.
 
 # Step 5: Finish implementing the new feature
 
-## 5.1: Switch to Code Mode
+## 5.1: Switch to Agent Mode
 
-In order to finish implementing this new feature, let's switch to **Code Mode**.
+In order to finish implementing this new feature, let's switch to **Agent Mode**.
 
 <img alt="14" src="images/14.png">
 
-Unlike Ask Mode, Code Mode can:
+Unlike Ask Mode, Agent Mode can:
 - Modify files
 - Create new code
 - Refactor existing logic
