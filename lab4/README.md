@@ -137,9 +137,9 @@ Bob should produce a clear mapping before any code is written.
 
 # Step 3: Implement the JavaScript version
 
-## 3.1: Switch to Code Mode
+## 3.1: Switch to Agent Mode
 
-Change to **Code Mode**.
+Change to **Agent Mode**.
 
 <img alt="5" src="images/5.png">
 
