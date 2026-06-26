@@ -426,13 +426,6 @@ Explore and try the frontend you opened in the previous step. Some testing examp
 
 <img alt="15" src="images/15.png">
 
-⚠️**NOTE**⚠️: If your tests are not successful, it means the application's backend is not running anymore. You can ask Bob to rerun the backend for you like you did previously in step 3.6 and start your tests again.
-
-**Prompt for Bob:**
-
-```bash
-Run the backend application.
-```
 
 ---
 
