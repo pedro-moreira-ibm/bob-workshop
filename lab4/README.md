@@ -193,7 +193,7 @@ This is useful because translation is not only about syntax. It is also about ch
 
 ## 4.1: Run and compare the two versions of data_processor
 
-Switch back to Code mode and ask Bob:
+Switch back to Agent mode and ask Bob:
 
 ```text
 Please run both versions of data_processor: python and javascript.
