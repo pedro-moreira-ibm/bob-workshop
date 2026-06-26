@@ -51,42 +51,42 @@ Open this folder in IBM Bob.
 
 ### 2.1: Understanding Bob Modes
 
-Bob has several distinct modes, each optimized for different tasks. The built-in modes you'll use in this lab are:
+Bob has three built-in modes, each optimized for a different type of task. The built-in modes you'll use in this lab are:
+
+#### 🤖 Agent Mode
+
+**When to use**: Writing, modifying, refactoring, or improving code
+
+* Implement features
+* Create new files
+* Modify existing code
+* Fix bugs
+* Refactor code
+* Run tools and tests as part of development work
 
 #### 🎯 Plan Mode
-**When to use**: Planning, designing, strategizing
-- Create project structures
-- Design API endpoints
-- Plan database schemas
-- Make architectural decisions
 
-#### 💻 Code Mode
-**When to use**: Writing, modifying, refactoring code
-- Implement features
-- Create files
-- Modify existing code
-- Fix bugs
+**When to use**: Planning, designing, or strategizing before implementation
+
+* Analyze requirements
+* Research technical approaches
+* Design project structures
+* Plan API endpoints
+* Plan database schemas
+* Make architectural decisions
+* Break complex tasks into clear implementation steps
 
 #### ❓ Ask Mode
-**When to use**: Learning, understanding, getting help
-- Explain code concepts
-- Get documentation
-- Understand errors
-- Learn best practices
 
-#### 🛠️ Advanced Mode
-**When to use**: Complex development tasks requiring full tool access
-- Handle advanced coding workflows
-- Use MCP tools
-- Combine reading, editing, and command execution
-- Work without tool restrictions
+**When to use**: Learning, understanding, or getting technical help
 
-#### 🔀 Orchestrator Mode
-**When to use**: Complex and multi-step projects requiring coordination
-- Break down large tasks into subtasks
-- Coordinate work
-- Manage workflows
-- Route planning, coding, and Q&A to the right mode
+* Explain code concepts
+* Analyze existing code
+* Get documentation-style answers
+* Understand errors
+* Learn best practices
+* Ask technical questions without changing code
+
 
 > **🎯 Bob Differentiator: [Customizable Modes](https://bob.ibm.com/docs/ide/configuration/custom-modes)**
 
