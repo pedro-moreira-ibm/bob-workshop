@@ -137,11 +137,11 @@ This collaborative approach ensures Bob will build exactly what you need, and wi
 
 ## Step 3: Backend development
 
-Now let's build the backend for your application using Bob's Code mode.
+Now let's build the backend for your application using Bob's Agent mode.
 
-### 3.1: Switch to Code Mode
+### 3.1: Switch to Agent Mode
 
-Change from Plan to **Code mode**.
+Change from Plan to **Agent mode**.
 
 <img alt="5" src="images/5.png">
 
