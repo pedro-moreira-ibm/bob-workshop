@@ -275,10 +275,10 @@ Once completed, Bob should modify:
 
 ## 6.1: Run the application
 
-Ask Bob to run the application again:
+Ask Bob to help you run the application again:
 
 ```bash
-Run the backend application.
+How do I run the backend application?
 ```
 
 ## 6.2: Open the frontend.
