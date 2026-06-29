@@ -123,9 +123,9 @@ That is expected. These folders are part of the modernization workflow and do no
 
 # Step 3: Modernize domain models
 
-## 3.1: Switch to Code Mode
+## 3.1: Switch to Agent Mode
 
-Change to **Code Mode**.
+Change to **Agent Mode**.
 
 ## 3.2: Convert a model to a record
 
