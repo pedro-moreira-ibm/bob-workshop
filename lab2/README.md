@@ -57,7 +57,7 @@ Understanding when to use each mode is one of the key productivity gains when wo
 - [Finish implementing the new feature](#step-5-finish-implementing-the-new-feature)
 - [Testing the updated application](#step-6-testing-the-updated-application)
 - [Generate documentation](#step-7-generate-documentation)
-- [Explore the Bob Findings functionality (OPTIONAL)](#step-8-explore-the-bob-findings-functionality-optional)
+- [Explore the Bob Findings functionality (OPTIONAL)](#step-8-explore-the-bob-findings-feature-optional)
 
 ---
 
